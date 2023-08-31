@@ -30,22 +30,9 @@ var ispubgfun = false
 
 document.write(ispubgfun)
 
-
-
 alert("aap ki jaan ko khatra hai")
-
-
-
-
 confirm("are you want to join our team")
-
-
-
-
 devname=prompt("Enter Your Name")
-
-
-
 document.write(devname)
 
 
