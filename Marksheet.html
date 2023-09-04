@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        
+
+
+        // Signup 
+        var name = prompt("Enter Your Name");
+        var email = prompt("Enter Your Email");
+        var pass = prompt("Enter Your Pass");
+        var cpass = prompt("Enter Your Confirm Pass");
+
+
+        // login
+        if (pass == cpass) {
+
+            var emaillog = prompt("Enter Your Email");
+            var passlog = prompt("Enter Your Pass");
+            if ((email == emaillog) && (pass == passlog)) {
+
+
+                document.write("Welcome <br>")
+
+
+
+                let eng = parseFloat(prompt("Enter Your  English Marks"))
+                let urd = parseFloat(prompt("Enter Your  Urdu Marks"))
+                let math = parseFloat(prompt("Enter Your  Math Marks"))
+
+
+
+                let obtainedmarks = eng + urd + math;
+
+
+
+                let perc = (obtainedmarks / 300) * 100
+
+
+
+
+
+                document.write("Obtained Marks " + obtainedmarks + "<br>")
+
+                
+                document.write("Percentage " + perc.toFixed(2) + "%" + "<br>")
+
+
+
+
+                if (perc <= 100 && perc >= 80) {
+
+
+                    document.write("Grade Is A+")
+
+                }
+                else if (perc < 80 && perc >= 70) {
+
+
+                    document.write("Grade Is A")
+
+                } else if (perc < 70 && perc >= 60) {
+
+
+                    document.write("Grade Is B")
+
+                } else if (perc < 60 && perc >= 50) {
+
+
+                    document.write("Grade Is C")
+
+                } else {
+
+                    document.write("<h1>Fail<h1>")
+                }
+
+            }
+            else {
+
+                document.write("invalid email or password")
+
+
+
+            }
+        } else {
+
+
+            document.write("pass doesn't match")
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
