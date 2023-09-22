@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ages = new Array(12, "22", "30", "34", "37", "67")
+        var studentsname = ["abc", "xyz", "fatimah", "affan", "hajra", "hamza", "zahid"];
+
+
+        // push method
+        // push()	aads a new element to the end of an array and returns the new length of an array
+        document.write("before =>" + studentsname + "<br>")
+        studentsname.push("haider")
+        document.write("after => " + studentsname + "<br>")
+
+
+        // unshift method
+        // unshift()	adds a new element to the beginning of an array and returns the new length of an array
+        document.write("before unshift => " + studentsname + "<br>")
+        studentsname.unshift("ali")
+        document.write("after  unshift => " + studentsname + "<br>")
+
+        //add by index  
+        document.write("before by index => " + studentsname + "<br>")
+        studentsname[2] = "zainab";
+        document.write("after  by index  => " + studentsname + "<br>")
+
+        // pop method
+        // pop()	removes the last element of an array and returns the removed element
+        document.write("before =>" + studentsname + "<br>")
+        studentsname.pop()
+        document.write("after => " + studentsname + "<br>")
+
+        // shift method
+        // shift()	removes the first element of an array and returns the removed element
+        document.write("before shift => " + studentsname + "<br>")
+        studentsname.shift()
+        document.write("after  shift => " + studentsname + "<br>")
+
+        // .length to count length
+        document.write("Length of my list =>" + studentsname.length + "<br>")
+
+        // indexOf()	searches an element of an array and returns its position
+        document.write("Index of my list =>" + studentsname.indexOf("affan") + "<br>")
+
+
+        // sort()	sorts the elements alphabetically in strings and in ascending order
+        document.write("sort of my list =>" + studentsname.sort() + "<br>")
+
+        // slice()	selects the part of an array and returns the new array
+        var myslicelist = studentsname.slice(3)
+        document.write(" my slice list =>" + myslicelist + "<br>")
+
+
+        // concat()	joins two or more arrays and returns a result
+        var name = ["junaid", "jamshed", "hassan", "ali"];
+        document.write(" my concat list =>" + myslicelist.concat(name) + "<br>")
+
+        // splice()	removes or replaces existing elements and/or adds new elements
+        document.write(" my splice list =>" + studentsname.splice(2, 5) + "<br>")
+        document.write(" my updated list after splice =>" + studentsname + "<br>")
+
+
+
+        // assignment plz use all array method and also use following methods
+
+        // find()	returns the first value of an array element that passes a test
+        // findIndex()	returns the first index of an array element that passes a test
+        // forEach()	calls a function for each element
+        // includes()	checks if an array contains a specified element
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
