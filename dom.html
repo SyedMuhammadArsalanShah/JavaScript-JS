@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p id="myFirstpara">
+        <strong>
+
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, nostrum! Vel quam ullam natus illum
+            adipisci. Nam repellat placeat, unde consectetur nesciunt ducimus aut, temporibus blanditiis quasi
+            voluptatum omnis ut?
+        </strong>
+
+
+
+
+
+    </p>
+
+
+
+
+    <p class="first">
+
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aspernatur ea incidunt nemo soluta rerum dolorum
+        illo. Soluta, accusantium cum. Ullam molestias explicabo facere, eum totam quidem provident ipsa nemo.
+    </p>
+
+
+
+
+
+    <div>
+
+
+    </div>
+
+    <script>
+
+        var first = document.getElementById("myFirstpara").innerHTML
+        var second = document.getElementById("myFirstpara").innerText
+
+
+        console.log(first);
+        console.log(second)
+
+
+
+
+
+        // var third = document.getElementsByClassName("first")[0].innerHTML;
+        var third = document.getElementsByClassName("first")[0];
+
+        console.log(third)
+
+
+
+        third.classList.add("myjavascriptclass")
+
+
+
+
+
+        var tagname = document.getElementsByTagName("div");
+
+
+        createElement = document.createElement("p");
+
+
+        createElement.innerText = "2nd last class of the semster";
+
+
+        tagname[0].appendChild(createElement);
+
+
+
+
+
+        createElement1 = document.createElement("b");
+
+
+        createElement1.innerText = "2nd last class of the semster and new semester is  start";
+
+
+        tagname[0].replaceChild(createElement1, createElement);
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

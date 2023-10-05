@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <label for="d1" class="form-label">Enter Your Weight</label>
+            <input type="number" class="form-control" id="d1" placeholder="Enter Your Weight">
+        </div>
+
+        <div class="mb-3">
+            <label for="d2" class="form-label">Enter Your Height in feets</label>
+            <input type="number" class="form-control" id="d2" placeholder="Enter Your Height in feets">
+        </div>
+
+        <div class="mb-3">
+            <label for="d3" class="form-label">Enter Your Height in inches</label>
+            <input type="number" class="form-control" id="d3" placeholder="Enter Your Height in feets">
+        </div>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-success" onclick="bmi()" type="button">Calculate</button>
+        </div>
+
+        <div class="mb-3">
+            <label for="d2" class="form-label">Here Your BMI</label>
+            <input type="number" class="form-control" id="ans" readonly placeholder="">
+        </div>
+
+
+        <div class="mb-3">
+            <h1 id="result">
+
+
+            </h1>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+
+
+
+
+        function bmi() {
+
+
+            var weight = parseInt(document.getElementById("d1").value);
+            var heightfeets = parseInt(document.getElementById("d2").value);
+            var heightInches = parseInt(document.getElementById("d3").value);
+
+
+
+
+            console.log(weight)
+
+
+
+
+            var totalinches = (heightfeets * 12) + heightInches;
+
+
+            var totalcentimeter = totalinches * 2.54;
+            var totalmeter = totalcentimeter / 100;
+            var bmi = weight / (totalmeter * totalmeter);
+            ans = document.getElementById("ans").value = bmi.toFixed(2);
+
+            res = " ";
+
+            if (ans < 18.5) {
+                document.getElementById("result").style.backgroundColor="red"
+                res = "You are underweight"
+
+            } else if (ans >= 18.5 && ans <= 24.9) {
+                document.getElementById("result").style.backgroundColor="green"
+                res = "You are Healthy in  weight MashaAllah "
+            }
+            else if (bmi > 24.9) {
+
+                document.getElementById("result").style.backgroundColor="yellow"
+                res = "You are overweight"
+
+
+            } else {
+
+                res = "Enter  your Fields"
+            }
+
+
+
+
+            document.getElementById("result").innerHTML = res
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
